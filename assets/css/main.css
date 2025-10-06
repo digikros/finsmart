@@ -133,6 +133,26 @@
   opacity: 1;
 }
 
+.pricing-card {
+  position: relative;
+  overflow: visible;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2BD4A3; /* ou a cor da tua marca */
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 6px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
 /**
 * Template Name: Nexa
 * Template URL: https://bootstrapmade.com/nexa-bootstrap-agency-template/
@@ -598,9 +618,17 @@ h6 {
 
 .footer .icon {
   color: var(--accent-color);
-  margin-right: 15px;
+  margin-right: 0;
+  margin-bottom: 14px;
   font-size: 24px;
   line-height: 0;
+}
+
+/* Apenas os dois primeiros blocos do rodapé (com d-flex na coluna) */
+.footer .col-lg-3.col-md-6.d-flex {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .footer h4 {
@@ -935,6 +963,17 @@ section,
     flex-direction: column;
     gap: 1rem;
   }
+
+  /* Center hero image strictly on small screens */
+  .hero .container .row .col-lg-8 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero .container .row .col-lg-8 img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .hero .hero-content .hero-btns .btn {
@@ -950,7 +989,9 @@ section,
 @media (max-width: 576px) {
   .hero .hero-content .hero-btns .btn {
     width: 100%;
-    max-width: 280px;
+    max-width: 200px;
+    padding: 15px 25px;
+    font-size: 0.6rem;
   }
 }
 
